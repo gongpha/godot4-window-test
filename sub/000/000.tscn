@@ -1,0 +1,218 @@
+[gd_scene load_steps=16 format=3 uid="uid://c2l220jqvrrun"]
+
+[ext_resource type="Script" path="res://sub/000/000.gd" id="1_5rui0"]
+[ext_resource type="Texture2D" uid="uid://cwvyrha4ociqx" path="res://sub/000/000.png" id="3_blsle"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8cp05"]
+texture = ExtResource("3_blsle")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+0:2/0 = 0
+5:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_1fdxh"]
+sources/0 = SubResource("TileSetAtlasSource_8cp05")
+
+[sub_resource type="Gradient" id="Gradient_f6dfs"]
+offsets = PackedFloat32Array(0.174051, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_2nrh6"]
+gradient = SubResource("Gradient_f6dfs")
+fill_to = Vector2(0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xoxmq"]
+atlas = ExtResource("3_blsle")
+region = Rect2(48, 48, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_it76d"]
+atlas = ExtResource("3_blsle")
+region = Rect2(0, 80, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rrq53"]
+atlas = ExtResource("3_blsle")
+region = Rect2(32, 80, 18, 16)
+
+[sub_resource type="Animation" id="Animation_1erua"]
+resource_name = "000"
+length = 14.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("003:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.5, 4.4, 5.4, 10.8, 11.3, 12.3, 12.8, 13.3, 13.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 0.378929, 2, 1),
+"update": 0,
+"values": [Vector2(-11, 87), Vector2(34, 87), Vector2(34, 87), Vector2(40, 87), Vector2(105, 87), Vector2(105, 87), Vector2(79, 87), Vector2(79, 87), Vector2(82, 77), Vector2(87, 120)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("003:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8, 2.1, 2.4, 2.7, 3, 3.3, 3.6, 4.7, 5.1, 6.5, 7.00796, 7.5, 8, 8.5, 9.00796, 9.5, 10, 11.4, 11.6, 11.8, 12, 12.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("002:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(5.4, 10.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(47, 63), Vector2(111, 63)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("003:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 12.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [SubResource("AtlasTexture_it76d"), SubResource("AtlasTexture_rrq53")]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("003:hframes")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 12.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [2, 1]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(12.3, 13.8),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"spawn_window"
+}, {
+"args": [],
+"method": &"window_animate"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_reg6u"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("002:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(47, 63)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("003:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-11, 87)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8kw5p"]
+_data = {
+"000": SubResource("Animation_1erua"),
+"RESET": SubResource("Animation_reg6u")
+}
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kin8b"]
+load_path = "res://.godot/imported/000.png-8fabbd517427f26fdd36cd5efdef05d5.ctex"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1n61k"]
+texture = SubResource("CompressedTexture2D_kin8b")
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+3:1/0 = 0
+3:2/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+5:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_v5f82"]
+sources/0 = SubResource("TileSetAtlasSource_1n61k")
+
+[node name="000" type="Node2D"]
+texture_filter = 1
+texture_repeat = 2
+script = ExtResource("1_5rui0")
+
+[node name="000" type="TileMap" parent="."]
+texture_filter = 1
+tile_set = SubResource("TileSet_1fdxh")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 196608, 0, 65536, 196608, 0, 131072, 196608, 0, 196608, 196608, 0, 262144, 196608, 0, 327680, 196608, 0, 1, 196608, 0, 65537, 196608, 0, 131073, 196608, 0, 196609, 196608, 0, 262145, 196608, 0, 327681, 196608, 0, 2, 196608, 0, 65538, 196608, 0, 131074, 196608, 0, 196610, 196608, 0, 262146, 196608, 0, 327682, 196608, 0, 3, 196608, 0, 65539, 196608, 0, 131075, 196608, 0, 196611, 196608, 0, 262147, 196608, 1, 327683, 196608, 2, 4, 196608, 0, 65540, 196608, 0, 131076, 196608, 0, 196612, 196608, 0, 5, 196608, 0, 65541, 196608, 0, 131077, 196608, 0, 196613, 196608, 0, 6, 196608, 0, 65542, 196608, 0, 131078, 196608, 0, 196614, 196608, 0, 262150, 327680, 1, 327686, 327680, 2, 7, 196608, 0, 65543, 196608, 0, 131079, 196608, 0, 196615, 196608, 0, 262151, 196608, 0, 327687, 196608, 0, 8, 196608, 0, 65544, 196608, 0, 131080, 196608, 0, 196616, 196608, 0, 262152, 196608, 0, 327688, 196608, 0, 9, 196608, 0, 65545, 196608, 0, 131081, 196608, 0, 196617, 196608, 0, 262153, 196608, 0, 327689, 196608, 0, 327685, 262144, 2, 327684, 262144, 2)
+
+[node name="001" type="Sprite2D" parent="."]
+scale = Vector2(10, 1)
+texture = SubResource("GradientTexture2D_2nrh6")
+centered = false
+
+[node name="002" type="Sprite2D" parent="."]
+position = Vector2(47, 63)
+texture = SubResource("AtlasTexture_xoxmq")
+centered = false
+
+[node name="003" type="Sprite2D" parent="."]
+position = Vector2(-11, 87)
+texture = SubResource("AtlasTexture_it76d")
+hframes = 2
+
+[node name="004" type="AnimationPlayer" parent="."]
+autoplay = "000"
+playback_speed = 1.5
+movie_quit_on_finish = true
+libraries = {
+"": SubResource("AnimationLibrary_8kw5p")
+}
+
+[node name="005" type="TileMap" parent="."]
+texture_filter = 1
+tile_set = SubResource("TileSet_v5f82")
+format = 2
+layer_0/tile_data = PackedInt32Array(393216, 262144, 0, 458752, 327680, 0, 524288, 327680, 0, 393217, 262144, 0, 458753, 327680, 0, 524289, 327680, 0, 393218, 262144, 0, 458754, 327680, 0, 524290, 327680, 0, 393219, 262144, 0, 458755, 327680, 0, 524291, 327680, 0, 393220, 262144, 0, 458756, 327680, 0, 524292, 327680, 0, 393221, 262144, 0, 458757, 327680, 0, 524293, 327680, 0, 393222, 262144, 0, 458758, 327680, 0, 524294, 327680, 0, 393223, 262144, 0, 458759, 327680, 0, 524295, 327680, 0, 393224, 262144, 0, 458760, 327680, 0, 524296, 327680, 0, 393225, 262144, 0, 458761, 327680, 0, 524297, 327680, 0)
