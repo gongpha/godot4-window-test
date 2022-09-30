@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://qevqs8776ohn"]
+
+[ext_resource type="Texture2D" uid="uid://cwvyrha4ociqx" path="res://sub/cat_popup/atlas.png" id="1_6bj67"]
+[ext_resource type="Script" path="res://sub/cat_popup/cat_outside.gd" id="2_km6r1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yy1em"]
+atlas = ExtResource("1_6bj67")
+region = Rect2(32, 80, 18, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gb23u"]
+atlas = ExtResource("1_6bj67")
+region = Rect2(0, 80, 32, 16)
+
+[node name="scene" type="Node2D"]
+texture_filter = 1
+texture_repeat = 1
+
+[node name="cat" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_yy1em")
+centered = false
+script = ExtResource("2_km6r1")
+normal = SubResource("AtlasTexture_gb23u")

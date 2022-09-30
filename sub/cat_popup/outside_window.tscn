@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhyt55mdl6e1d"]
+
+[ext_resource type="PackedScene" uid="uid://qevqs8776ohn" path="res://sub/cat_popup/outside_scene.tscn" id="1_eji7r"]
+
+[node name="outside_window" type="Window"]
+disable_3d = true
+transparent_bg = true
+size = Vector2i(512, 256)
+visible = false
+borderless = true
+content_scale_factor = 4.0
+
+[node name="scene" parent="." instance=ExtResource("1_eji7r")]
